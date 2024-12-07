@@ -1,11 +1,11 @@
-# Counseling Management System
+# Online Assignment submission and Grading System
 
-The Counseling Management System is a web application built with Java Spring Boot and MySQL database. It facilitates efficient student-counselor mapping, student appointment scheduling with counselors, and provides accessible communication channels. This README provides an overview of the project and information on how to use and deploy it.
+The Online Assignment Submission and Grading System is a web application developed using React, Spring Boot, and MySQL. It streamlines assignment submissions, grading processes, and dashboard access for admins, faculty, and students, enabling efficient management of courses, assignments, and grades.
 
 ## Features
 
-- Student-Counselor Mapping
-- Student Appointment Scheduling
+- Faculty-Counselor 
+- Student Assignment Scheduling
 - Communication Channels Accessibility
 
 ## Technologies Used
@@ -14,11 +14,11 @@ The Counseling Management System is a web application built with Java Spring Boo
 - MySQL Database
 - Thymeleaf for Frontend
 
-## Deployment URLs
+
 
 ### Frontend Only
 
-The frontend of the Counseling Management System is permanently accessible at: https://cms-front-end-pearl.vercel.app/
+The frontend of the Online Assignment submission and Grading System is permanently accessible at: https://cms-front-end-pearl.vercel.app/
 
 ### Complete Deployed Application
 
