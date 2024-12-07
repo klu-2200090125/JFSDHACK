@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Submit Assignment</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style>
+		body {
+			font-family: 'Arial', sans-serif;
+			background-color: #f4f4f4;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+
+		.container {
+			max-width: 400px;
+			background: #fff;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+		}
+
+		h2 {
+			text-align: center;
+			color: #3498db;
+		}
+
+		label {
+			margin-bottom: 8px;
+			color: #333;
+		}
+
+		input[type="file"],
+		button {
+			width: 100%;
+			padding: 12px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+
+		button {
+			background-color: #3498db;
+			color: white;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		button:hover {
+			background-color: #2980b9;
+		}
+
+		.success-message {
+			color: green;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h2>Submit Your Assignment</h2>
+		<form id="uploadForm" method="POST" enctype="multipart/form-data" onsubmit="return handleFileUpload()">
+			<div class="form-group">
+				<label for="file">Upload Assignment File (PDF or Word)</label>
+				<input type="file" id="file" name="file" accept=".pdf,.doc,.docx" class="form-control-file" required>
+			</div>
+			<button type="submit" class="btn btn-primary btn-block">Submit Assignment</button>
+		</form>
+		<div id="successMessage" class="success-message" style="display: none;">
+			Uploaded and submitted successfully!
+		</div>
+	</div>
+
+	<script>
+		function handleFileUpload() {
+			const fileInput = document.getElementById('file');
+			const file = fileInput.files[0];
+			const allowedExtensions = ['pdf', 'doc', 'docx'];
+
+			if (file) {
+				const fileExtension = file.name.split('.').pop().toLowerCase();
+				if (!allowedExtensions.includes(fileExtension)) {
+					alert('Only PDF and Word files are allowed.');
+					return false;
+				}
+
+				document.getElementById('successMessage').style.display = 'block';
+				return false; // Prevent actual form submission for demonstration
+			}
+
+			alert('Please select a file to upload.');
+			return false;
+		}
+	</script>
+</body>
+
+</html>
