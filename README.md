@@ -4,7 +4,7 @@ The Online Assignment Submission and Grading System is a web application develop
 
 ## Features
 
-- Faculty-Counselor 
+- Faculty-Student
 - Student Assignment Scheduling
 - Communication Channels Accessibility
 
