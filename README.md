@@ -16,12 +16,6 @@ The Online Assignment Submission and Grading System is a web application develop
 
 
 
-### Frontend Only
 
-The frontend of the Online Assignment submission and Grading System is permanently accessible at: https://cms-front-end-pearl.vercel.app/
-
-### Complete Deployed Application
-
-The complete deployed application, including the backend and frontend, is accessible at: https://cms-mongodb.onrender.com/
 
 
